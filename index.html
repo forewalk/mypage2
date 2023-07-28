@@ -85,12 +85,12 @@
     </style>
     <script>
         $(document).ready(function () {
-            fetch("spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(data => {
+            fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(data => {
                 let weather = data['temp']
                 $('#temp').text(weather)
             })
 
-            fetch("spartacodingclub.shop/web/api/movie").then(res => res.json()).then(data => {
+            fetch("http://spartacodingclub.shop/web/api/movie").then(res => res.json()).then(data => {
 
                 let rows = data['movies']
 
