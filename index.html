@@ -83,6 +83,16 @@
             margin-right: 10px;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(data => {
+
+                let weather = data['temp']
+
+                $('#temp').text(weather)
+            })
+        })
+    </script>
 </head>
 
 <body>
@@ -90,7 +100,8 @@
         <h1>
             내 생에 최고의 영화들!
         </h1>
-        <button>
+        <div>현재 서울의 날씨 : <span id="temp">0</span>도</div>
+        <button onclick="hey()">
             영화 기록하기
         </button>
     </div>
